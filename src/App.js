@@ -14,11 +14,26 @@ export default function App() {
   }, [])
 
   return (
+    
     <div className="App">
       <Header/>
+      <form onSubmit={logName}>
+        <label>
+          Search:
+        </label><br />
+        <input type="text" name="searchName" />
+      </form>
         {characters.map(({name, image, species, id}) => <Character key={id} name={name} imgUrl={image} species={species}/>)}
     </div>
   );
+
+  function logName(event) {
+    event.preventDefault()
+    const search = event.target
+    const searchedName = search.searchName
+    console.log(searchedName.value)
+  
+  }
 }
 
 
