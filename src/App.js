@@ -1,23 +1,25 @@
 import {useEffect, useState} from "react";
 import getCharacters from "./services/getCharacters";
+import Character from './Character';
+import getLocation from "./services/getLocation";
+import Location from "./Location";
 
 
 export default function App() {
 
-  const [characters,setCharacters] = useState([])
+  const [locations,setLocations] = useState([])
 
   useEffect(() => {
-    getCharacters()
-    .then (data => setCharacters(data.results))
+    getLocation()
+    .then(data => setLocations(data.results))
     .catch(error => console.log(error))
   },[])
 
   return (
     <div className="App">
-      <ul>
-      {characters.map(characters => <li>{characters.name}</li>)}
-      </ul>
-        
+      {locations.map(({name, id, type , dimension}) =>
+        <Location key={id} name={name} type={type} dimension={dimension}/>)
+      }
     </div>
   );
 }
