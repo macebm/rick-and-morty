@@ -17,9 +17,6 @@ export default function App() {
     <div className="App">
       <Header/>
         {characters.map(({name, image, species, id}) => <Character key={id} name={name} imgUrl={image} species={species}/>)}
-        <Header/>
-        {characters.map(({name, image, species, id}) => <Character key={id} name={name} imgUrl={image} species={species}/>)}
-
     </div>
   );
 }
