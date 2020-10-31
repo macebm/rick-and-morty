@@ -7,6 +7,7 @@ import Location from "./Location"
 import getCharacters from "./services/getCharacters";
 import getLocations from "./services/getLocations";
 
+
 export default function App() {
 
   const [characters, setCharacters] = useState([])
@@ -27,16 +28,17 @@ export default function App() {
   return (
     <div className="App">
       <Header/>
+        
         <ContainerSection id="charactersection">
           {characters.map(({name, image, species, id}) => 
             <Character key={id} name={name} imgUrl={image} species={species}/>)}
         </ContainerSection>
 
         <ContainerSection id="locationsection">
-          {locations.map(location => 
-            <Location key={location.id} name={location.name} type={location.type} dimension={location.dimension}/>)}
+          {locations.map(({id, name, type, dimension}) => 
+            <Location key={id} name={name} type={type} dimension={dimension}/>)}
         </ContainerSection>
-        <Footer/>
+      <Footer/>
     </div>
   );
 }

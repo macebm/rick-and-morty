@@ -7,7 +7,7 @@ function ContainerSection({children}){
     return <Wrapper>{children}</Wrapper>
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
     background: whitesmoke;
     padding: 20px 0 80px 0;
     

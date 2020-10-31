@@ -33,6 +33,6 @@ const Anchor = styled.a`
 
 
     :hover{
-        color: red;
+        color: deepskyblue;
     }
 `
