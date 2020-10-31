@@ -1,9 +1,4 @@
-
-const searchName = "rick"
-
-
-
 export default function getCharacters() {
-    return fetch('https://rickandmortyapi.com/api/character/?name=' + searchName) 
+    return fetch('https://rickandmortyapi.com/api/character/') 
     .then(res => res.json())
 }
