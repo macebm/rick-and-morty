@@ -4,7 +4,7 @@ export default Header;
 
 
 function Header(){
-    return <Wrapper>Characters</Wrapper>
+    return <Wrapper>Rick and Morty</Wrapper>
 }
 
 const Wrapper = styled.header`

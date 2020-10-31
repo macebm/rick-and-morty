@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-export default function Location({name, type, dimension}){
+export default function Location({name, air_date, episode}){
     return <Wrapper>
-        <h3>Name of Location:</h3>
+        <h3>Name of Episode:</h3>
         <p>{name}</p>
-        <h3>Type of Location:</h3>
-        <p>{type}</p>
-        <h3>Dimension of Location:</h3>
-        <p>{dimension}</p>
+        <h3>Air date of Episode:</h3>
+        <p>{air_date}</p>
+        <h3>Number of Episode:</h3>
+        <p>{episode}</p>
     </Wrapper>
 }
 
