@@ -3,8 +3,8 @@ import styled from "styled-components";
 export default ContainerSection;
 
 
-function ContainerSection({children, newClass}){
-    return <Wrapper  className={newClass} >{children}</Wrapper>
+function ContainerSection({children, className}){
+    return <Wrapper  className={className} >{children}</Wrapper>
 }
 
 const Wrapper = styled.div`

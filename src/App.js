@@ -32,12 +32,12 @@ export default function App() {
     <div className="App">
       <Header/>
         
-        <ContainerSection newClass="charactersection">
+        <ContainerSection className="charactersection">
           {characters.map(({name, image, species, id}) => 
             <Character key={id} name={name} imgUrl={image} species={species}/>)}
         </ContainerSection>
 
-        <ContainerSection newClass="locationsection">
+        <ContainerSection className="locationsection">
           {locations.map(({id, name, type, dimension}) => 
             <Location key={id} name={name} type={type} dimension={dimension}/>)}
         </ContainerSection>

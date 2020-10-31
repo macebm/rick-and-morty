@@ -11,7 +11,7 @@ function NavButton({children, onClick}){
        
 }
 
-const Wrapper = styled.button`
+const Wrapper = styled.a`
     padding: 10px;
     text-decoration: none;
 
