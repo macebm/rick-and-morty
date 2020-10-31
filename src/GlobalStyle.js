@@ -14,6 +14,7 @@ export default createGlobalStyle`
         margin: 0;
     }
 
+
     input, textarea, button {
         font-size: 1em;
     }

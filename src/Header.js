@@ -8,9 +8,12 @@ function Header(){
 }
 
 const Wrapper = styled.header`
-    background: green;
+    background: #F7F53F;
     width: 100vw;
     text-align: center;
     padding: 20px;
-    color: white;
+    color: #1F2151;
+    font-weight: bold;
+    font-size: 1.4em;
+
 `
