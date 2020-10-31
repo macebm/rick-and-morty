@@ -14,12 +14,16 @@ export default createGlobalStyle`
         margin: 0;
     }
 
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+    }
 
     input, textarea, button {
         font-size: 1em;
     }
 
     .hidden{
-        visibility: hidden;
+        display: none;
     }
 `

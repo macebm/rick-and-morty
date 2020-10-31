@@ -3,12 +3,11 @@ import styled from "styled-components"
 export default Footer;
 
 
-function Footer(){
-    return <Wrapper>
-        <nav>
-            <Anchor href="">Characters</Anchor>
-            <Anchor href="">Locations</Anchor>
-        </nav>
+function Footer({children}){
+
+    
+
+    return <Wrapper>{children}
     </Wrapper>
 }
 
@@ -21,18 +20,5 @@ const Wrapper = styled.footer`
     bottom: 0;
     font-weight: bold;
 
-    nav{
-        display: flex;
-        justify-content: space-evenly;
-    }
-`
-
-const Anchor = styled.a`
-    padding: 10px;
-    text-decoration: none;
-
-
-    :hover{
-        color: deepskyblue;
-    }
+    
 `
