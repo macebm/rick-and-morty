@@ -15,7 +15,7 @@ export default function App() {
   const [characters, setCharacters] = useState([])
   const [locations, setLocations] = useState([]);
   const [episodes, setEpisodes] = useState([]);
-
+  
   
 
   useEffect(() => {
@@ -45,12 +45,12 @@ export default function App() {
             <Character key={id} name={name} imgUrl={image} species={species}/>)}
         </ContainerSection>
 
-        <ContainerSection className="locationsection">
+        <ContainerSection className="locationsection hidden">
           {locations.map(({id, name, type, dimension}) => 
             <Location key={id} name={name} type={type} dimension={dimension}/>)}
         </ContainerSection>
 
-        <ContainerSection className="episodesection">
+        <ContainerSection className="episodesection hidden">
           {episodes.map(({id, name, air_date, episode}) => 
             <Location key={id} name={name} air_date={air_date} episode={episode}/>)}
         </ContainerSection>
@@ -61,9 +61,9 @@ export default function App() {
             <NavButton onClick={ShowEpisodes}>Episodes</NavButton>
           </nav>
       </Footer>
+
     </div>
   );
-
 
 
   function ShowCharacters(){
