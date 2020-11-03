@@ -1,5 +1,4 @@
-import {createGlobalStyle} from "styled-components"
-
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -22,8 +21,4 @@ export default createGlobalStyle`
     input, textarea, button {
         font-size: 1em;
     }
-
-    .hidden{
-        display: none;
-    }
-`
+`;
