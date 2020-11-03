@@ -7,7 +7,7 @@ function Footer() {
   return (
     <Wrapper>
       <nav>
-        <NavLink to="/">
+        <NavLink style={{ textDecoration: "none" }} to="/">
           <NavButton>Characters</NavButton>
         </NavLink>
         <NavLink to="/episodes">
@@ -32,10 +32,10 @@ const Wrapper = styled.footer`
 `;
 
 const NavButton = styled.span`
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #1f2151;
 
   :hover {
     color: deepskyblue;
-    text-decoration: none;
   }
 `;
