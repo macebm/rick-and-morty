@@ -4,6 +4,7 @@ import Episodes from "./Episodes";
 import Footer from "./Footer";
 import Header from "./Header";
 import Locations from "./Locations";
+import NotFound from "./NotFound";
 
 export default function App() {
   return (
@@ -18,6 +19,9 @@ export default function App() {
         </Route>
         <Route path="/locations">
           <Locations />
+        </Route>
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
 
