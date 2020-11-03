@@ -27,9 +27,16 @@ export default function Characters() {
           }
         }}
       />
-      {characters.map(({ name, image, species, id }) => (
+
+      {characters !== undefined
+        ? characters.map(({ name, image, species, id }) => (
+            <Character key={id} name={name} imgUrl={image} species={species} />
+          ))
+        : alert("Not a character")}
+
+      {/* {characters.map(({ name, image, species, id }) => (
         <Character key={id} name={name} imgUrl={image} species={species} />
-      ))}
+      ))} */}
     </ContainerSection>
   );
 }
