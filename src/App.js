@@ -22,7 +22,7 @@ export default function App() {
         <label>
           Search Name:
         </label><br />
-  <input type="text" name="searchName" onKeyUp={logName1} />
+  <input type="text" name="searchName" onChange={logName1} />
       </form>
          {typeof characters !== "undefined" &&
           characters.map(({name, image, species, id}) => <Character key={id} name={name} imgUrl={image} species={species}/>)
@@ -43,7 +43,7 @@ export default function App() {
   function logName1(event) {
     event.preventDefault()
     const search = event.target
-    console.log(search.value)
+    // console.log(search.value)
     getCharactersByName(search.value)
     .then(namedata => setCharacters(namedata.results))
     .catch(err => console.log(err))
