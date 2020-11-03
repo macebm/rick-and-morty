@@ -35,6 +35,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+
       <ContainerSection className="charactersection">
         {characters.map(({ name, image, species, id }) => (
           <Character key={id} name={name} imgUrl={image} species={species} />
