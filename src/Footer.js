@@ -7,15 +7,9 @@ function Footer() {
   return (
     <Wrapper>
       <nav>
-        <NavLink style={{ textDecoration: "none" }} to="/">
-          <NavButton>Characters</NavButton>
-        </NavLink>
-        <NavLink to="/episodes">
-          <NavButton>Episodes</NavButton>
-        </NavLink>
-        <NavLink to="/locations">
-          <NavButton>Locations</NavButton>
-        </NavLink>
+        <NavLinkStyled to="/">Characters</NavLinkStyled>
+        <NavLinkStyled to="/episodes">Episodes</NavLinkStyled>
+        <NavLinkStyled to="/locations">Locations</NavLinkStyled>
       </nav>
     </Wrapper>
   );
@@ -31,8 +25,8 @@ const Wrapper = styled.footer`
   font-weight: bold;
 `;
 
-const NavButton = styled.span`
-  text-decoration: none !important;
+const NavLinkStyled = styled(NavLink)`
+  text-decoration: none;
   color: #1f2151;
 
   :hover {
