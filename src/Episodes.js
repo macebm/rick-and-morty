@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ContainerSection from "./ContainerSection";
-import Location from "./Location";
+import Episode from "./Episode";
 import getEpisodes from "./services/getEpisodes";
 
 export default function Episodes() {
@@ -15,7 +15,7 @@ export default function Episodes() {
   return (
     <ContainerSection>
       {episodes.map(({ id, name, air_date, episode }) => (
-        <Location key={id} name={name} air_date={air_date} episode={episode} />
+        <Episode key={id} name={name} air_date={air_date} episode={episode} />
       ))}
     </ContainerSection>
   );
