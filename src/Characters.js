@@ -154,7 +154,7 @@ const CaracterSearchBox = styled.div`
   display: flex;
   padding: 10px;
   background: blanchedalmond;
-  margin-left: 10px;
+  margin: 1rem auto 1rem auto;
 
   input {
     border: none;
