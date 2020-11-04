@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import Character from "./Character";
 import ContainerSection from "./ContainerSection";
 import getCharacters from "./services/getCharacters";
@@ -26,7 +27,7 @@ export default function Characters() {
 
   return (
     <ContainerSection>
-      <div>
+      <CaracterSearchBox>
         <input
           type="text"
           placeholder="Write character name"
@@ -37,7 +38,7 @@ export default function Characters() {
         {searchedCharacter !== "" && (
           <span onClick={() => setSearchedCharacter("")}>&times;</span>
         )}
-      </div>
+      </CaracterSearchBox>
 
       {characters ? (
         characters.map(({ name, image, species, id }) => (
@@ -53,3 +54,22 @@ export default function Characters() {
     </ContainerSection>
   );
 }
+
+const CaracterSearchBox = styled.div`
+  border: 1px solid black;
+  max-width: 230px;
+  display: flex;
+  padding: 10px;
+  background: blanchedalmond;
+  margin-left: 10px;
+
+  input {
+    border: none;
+    background: blanchedalmond;
+  }
+
+  span {
+    color: red;
+    margin-left: 5px;
+  }
+`;
