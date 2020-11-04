@@ -37,13 +37,13 @@ export default function Characters() {
   function handlePageOfCharacters(operator) {
     const count = Number(pageNumber);
     if (operator === "-" && count > 1) {
-      const counter = count - 1;
-      setPageNumber(counter);
+      // const counter = count - 1;
+      setPageNumber(count - 1);
     } else if (operator === "-" && count === 1) {
       setPageNumber(20);
     } else if (operator === "+" && count < 20) {
-      const counter = count + 1;
-      setPageNumber(counter);
+      //const counter = count + 1;
+      setPageNumber(count + 1);
     } else if (operator === "+" && count === 20) {
       setPageNumber(1);
     }
@@ -78,7 +78,14 @@ export default function Characters() {
           onChange={handleCharacterSearch}
         />
         {searchedCharacter !== "" && (
-          <span onClick={() => setSearchedCharacter("")}>&times;</span>
+          <span
+            onClick={() => {
+              setSearchedCharacter("");
+              setPageNumber(1);
+            }}
+          >
+            &times;
+          </span>
         )}
       </CaracterSearchBox>
       <Position>
@@ -107,7 +114,14 @@ export default function Characters() {
         <NoCaracter>
           <h3>No character found with this name.</h3>
           <h3>Click on the button below to return!</h3>
-          <button onClick={() => setSearchedCharacter("")}>RETURN</button>
+          <button
+            onClick={() => {
+              setSearchedCharacter("");
+              setPageNumber(1);
+            }}
+          >
+            RETURN
+          </button>
         </NoCaracter>
       )}
     </ContainerSection>
