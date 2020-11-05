@@ -150,7 +150,7 @@ const Position = styled.div`
 
 const CaracterSearchBox = styled.div`
   border: 1px solid black;
-  max-width: 230px;
+  max-width: 300px;
   display: flex;
   padding: 10px;
   background: blanchedalmond;
